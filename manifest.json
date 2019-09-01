@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "NoFlashScratch",
+  "description": "Change scratch player to phosphorus",
+	"icons": {
+		"48":"icon.png"
+	},
+  "version": "1.0",
+      "browser_action": {
+        "default_title": "NoFlashScratch",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "all_frames": true
+    },
+    "content_scripts":[
+        {
+            "matches":["https://scratch.mit.edu/projects/*"],
+            "js":["background.js"],
+        }
+    ]
+}
